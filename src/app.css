@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* used inside header, main, footer to keep min/max consistent */
+.wrapper {
+	@apply mx-auto w-full px-8;
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+	.wrapper {
+		@apply px-16;
+	}
+}
+
+@media (min-width: 1024px) {
+	/* tailwind is 'lg': https://tailwindcss.com/docs/responsive-design */
+	.wrapper {
+		@apply px-32;
+	}
+}
